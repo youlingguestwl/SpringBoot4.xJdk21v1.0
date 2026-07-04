@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: demo
+
+logging:
+  level:
+    root: INFO
+    # 针对 Spring Web 通用日志
+    org.springframework.web: TRACE
+
+    # 针对 WebClient / Reactor Netty
+    reactor.netty.http.client: DEBUG
+
+    # 针对 RestTemplate + Apache HttpClient
+    org.apache.http.wire: DEBUG
+    org.apache.http.headers: DEBUG
+
+
+url: http://localhost:9000
