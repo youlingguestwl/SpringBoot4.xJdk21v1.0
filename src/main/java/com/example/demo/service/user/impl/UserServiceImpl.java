@@ -16,16 +16,16 @@ public class UserServiceImpl implements IUserService {
     @Resource
     private FastApiClient fastApiClient;
 
-    @Value("${url:http://localhost:9000/}")
+    @Value("${url:http://demo-backend:8000/}")
     private String fastApiUrl;
 
     @Override
     public ResponseEntity<String> login(Map<String, Object> userData) {
-        return fastApiClient.invoke(fastApiUrl, "/login", userData);
+        return fastApiClient.invoke(fastApiUrl, "/users/login", userData);
     }
 
     @Override
     public ResponseEntity<String> register(Map<String, Object> userData) {
-        return fastApiClient.invoke(fastApiUrl, "/register", userData);
+        return fastApiClient.invoke(fastApiUrl, "/users/register", userData);
     }
 }

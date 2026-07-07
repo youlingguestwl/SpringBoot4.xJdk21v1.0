@@ -16,4 +16,6 @@ logging:
     org.apache.http.headers: DEBUG
 
 
-url: http://localhost:9000
+#url: http://localhost:8000
+# 容器修改
+url: http://demo-backend:8000
